@@ -1,0 +1,1 @@
+find all dangerous function calls

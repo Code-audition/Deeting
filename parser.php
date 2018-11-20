@@ -3,13 +3,7 @@
 require 'vendor/autoload.php';
 use PhpParser\ParserFactory;
 
-$code = <<<'CODE'
-<?php
-
-// $_GET[x]($_POST[y]);
-system(base64_decode($_GET[c]));
-CODE;
-
+$code = file_get_contents($argv[1]);
 $parser = (new ParserFactory)->create(ParserFactory::PREFER_PHP7);
 
 try {
